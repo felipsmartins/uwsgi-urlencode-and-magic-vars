@@ -15,7 +15,7 @@ Because `%3` (from string `ABC_%3F`) is a reserved placeholder (see magic vars),
 * uwsgi v2.0.18
 * any web framework wsgi compatible (such as flask or django)
 
-** Installing minimum requirements: **  
+**Installing minimum requirements:**  
 ```shell
 # cd into this repository directory
 python -m venv
