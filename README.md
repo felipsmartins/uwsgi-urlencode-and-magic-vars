@@ -1,7 +1,7 @@
 # Encoded strings and uwsgi magic variables
 
 URL encoded strings (AKA [URL Quoting](https://docs.python.org/3/library/urllib.parse.html#url-quoting) in python) don't well play inside configuration files (*.ini files).  
-The issues lies in strings containing sequences chars matching to chars in the [magic table of configuration placeholders](The magic table of configuration placeholders).  
+The issues lies in strings containing sequences chars matching to chars in the [magic table of configuration placeholders](https://uwsgi-docs.readthedocs.io/en/latest/Configuration.html#magic-variables).  
 It leads to issues like urlencoded strings (i.g.: passwords) being modified by uwsgi process.
 Real (and common usage) exemple:  
 Given a environmwent varible like `DSN=amqp://admin:ABC_%3F@localhost:5972` and placed at `uwsgi.ini`, when I run the application it's expected to 
